@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Willy the Wallet</title>
+  <meta name="description"
+    content="Willy the Wallet es una billetera inteligente que te ayudará a organizar mejor tu dinero">
+  <meta name="robots" content="index, follow">
+
+  <!--TODO:SE IMPLEMENTARA DESPUES LA IMAGEN-->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+
+<body>
+  <header>
+    <a href="index.html">
+      <img src="images/logo.png" alt="">
+      <div>
+        <strong>Willy the Wallet</strong>
+        <small>TU BILLETERA INTELIGENTE</small>
+      </div>
+    </a>
+
+    <nav aria-label="Principal">
+      <ul>
+        <li><a href="index.html" aria-current="page">Panel Principal</a></li>
+        <li><a href="movimientos.html">Movimientos</a></li>
+        <li><a href="objetivos.html">Objetivos</a></li>
+        <li><a href="analisis.html">Análisis de Gastos Hormiga</a></li>
+      </ul>
+    </nav>
+
+    <time datetime="2026-11-02">
+      Hoy, 2 de Noviembre
+    </time>
+
+    <div>
+      <img src="images/user.png" alt="">
+      <div>
+        <strong>Willy Plus</strong>
+        <small>Activo</small>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!--*Saludo y agregar gastos e ingreso-->
+    <div>
+      <div>
+        <h1>Hola, Usuario 👋</h1>
+        <strong>X días en racha</strong>
+        <p>Día X del mes - Llevas X días consecutivos registrando tus ingresos. ¡Sigue así!</p>
+      </div>
+      <div>
+        <button type="button">Gasto Hormiga Rápido</button>
+        <button type="button">Nuevo Gasto</button>
+        <button type="button">Registrar Ingreso</button>
+      </div>
+    </div>
+
+    <!--*Agregar gastos rapidos-->
+    <section>
+      <h2>Captura instantánea de micro-gastos</h2>
+      <div>
+        <button type="button">Helado (S/5.99)</button>
+        <button type="button">Chocolate (S/10.99)</button>
+        <button type="button">Chicle (S/8.99)</button>
+        <button type="button">Agregar Gasto Rápido</button>
+      </div>
+    </section>
+
+    <!--*Balance y ahorro actual-->
+    <section>
+      <h2>Balance disponible y ahorro actual del mes</h2>
+      <div>
+        <strong>S/954.50</strong>
+        <small>Logrado</small>
+      </div>
+      <dl>
+        <dt>Total Ingresos</dt>
+        <dd>S/2450</dd>
+        <dt>Gastos Fijos</dt>
+        <dd>S/1280</dd>
+        <dt>Gastos Hormiga y Variables</dt>
+        <dd>-S/215.50</dd>
+      </dl>
+      <div>
+        <label for="eficiencia">Eficiencia sobre ingresos</label>
+        <small>39% retenido</small>
+        <progress id="eficiencia" max="100" value="39">39%</progress>
+      </div>
+    </section>
+
+    <!--*Ahorro potencial-->
+    <section>
+      <h2>Tu ahorro potencial</h2>
+      <small>+22.6% más</small>
+
+      <div>
+        <strong>S/1170</strong>
+        <small>sin fugas micro</small>
+      </div>
+
+      <div>
+        <strong>Diferencia fugada en compras hormiga: -S/215.50 este mes</strong>
+        <p>Si eliminas estos gastos podrás llegar a tu objetivo X días antes.</p>
+      </div>
+
+      <div>
+        <p>Ahorro actual (S/954.50) vs. potencial (S/1170)</p>
+        <small>Fuga de S/215.50</small>
+      </div>
+
+      <div class="barra" role="img" aria-label="Ahorro real S/954.50 de S/1170 potenciales, fuga de S/215.50">
+        <div class="tramo-real"></div>
+        <div class="tramo-fuga"></div>
+      </div>
+
+      <ul>
+        <li><span class="punto-real"></span> Ahorro real</li>
+        <li><span class="punto-fuga"></span> Gasto hormiga (recuperable)</li>
+      </ul>
+    </section>
+
+    <!--*Objetivos del Mes-->
+    <section>
+      <h2>Objetivos del Mes: Fondo de Emergencia/Moto</h2>
+      <button type="button">Ajustar Meta</button>
+      <div>
+        <strong>S/954.50</strong>
+        <small>de S/1200.00</small>
+      </div>
+      <div>
+        <small>79.5% completado</small>
+      </div>
+      <div>
+        <label for="objetivo">Progreso del objetivo</label>
+        <progress id="objetivo" max="100" value="79.5">79.5%</progress>
+      </div>
+      <div>
+        <h3>Semana en Curso</h3>
+        <ol>
+          <li><time datetime="2026-11-02">Lunes 2, Nov</time> - S/50.00</li>
+          <li><time datetime="2026-11-03">Martes 3, Nov</time> - S/50.00</li>
+          <li aria-current="date"><time datetime="2026-11-04">Miércoles 4, Nov</time> - S/50.00</li>
+          <li><time datetime="2026-11-05">Jueves 5, Nov</time> - S/50.00</li>
+          <li><time datetime="2026-11-06">Viernes 6, Nov</time> - S/50.00</li>
+          <li><time datetime="2026-11-07">Sábado 7, Nov</time> - S/50.00</li>
+          <li><time datetime="2026-11-08">Domingo 8, Nov</time> - S/50.00</li>
+        </ol>
+      </div>
+    </section>
+
+    <!--*Registrar Movimiento-->
+    <section>
+      <h2>Registrar Movimiento</h2>
+      <form>
+
+        <fieldset>
+          <legend>Tipo de Movimiento</legend>
+          <input type="radio" id="ingresos" name="tipoMovimiento" value="ingresos">
+          <label for="ingresos">Ingreso</label>
+
+          <input type="radio" id="gasto" name="tipoMovimiento" value="gasto" required checked>
+          <label for="gasto">Gasto</label>
+
+          <input type="radio" id="hormiga" name="tipoMovimiento" value="hormiga">
+          <label for="hormiga">Gasto Hormiga</label>
+
+        </fieldset>
+        <label for="monto">Monto (S/)</label>
+        <input type="number" id="monto" name="monto" placeholder="0.00" step="0.01" required>
+
+        <label for="descripcion">Descripción</label>
+        <input type="text" required id="descripcion" name="descripcion"
+          placeholder="Ej: Helado de Capuccino, Chicle,...">
+
+        <button type="submit">Registrar</button>
+      </form>
+    </section>
+
+    <!--*Movimientos Recientes-->
+    <section>
+      <h2>Movimientos Recientes</h2>
+      <p>Resumen de movimientos en el último mes</p>
+      <div role="group" aria-label="Filtrar movimientos por tipo">
+        <button type="button" data-filtro-mov="todos" aria-pressed="true">Todos</button>
+        <button type="button" data-filtro-mov="ingresos" aria-pressed="false">Ingresos</button>
+        <button type="button" data-filtro-mov="gasto" aria-pressed="false">Gasto</button>
+        <button type="button" data-filtro-mov="hormiga" aria-pressed="false">Gasto hormiga</button>
+      </div>
+
+      <ul>
+        <li data-tipo-mov="hormiga">
+          <strong>Helado de Capuccino</strong>
+          <time datetime="2026-11-02">2 Nov 2026</time>
+          <span>-S/5.99</span>
+          <p>Comida rápida impulsiva</p>
+        </li>
+        <li data-tipo-mov="gasto">
+          <strong>Pago de Luz</strong>
+          <time datetime="2026-11-01">1 Nov 2026</time>
+          <span>-S/120.00</span>
+          <p>Gasto mensual</p>
+        </li>
+        <li data-tipo-mov="ingresos">
+          <strong>Ingreso por Freelance</strong>
+          <time datetime="2026-10-30">30 Oct 2026</time>
+          <span>+S/500.00</span>
+          <p>Proyecto de diseño web</p>
+        </li>
+        <li data-tipo-mov="hormiga">
+          <strong>Chicle de Menta</strong>
+          <time datetime="2026-10-29">29 Oct 2026</time>
+          <span>-S/8.99</span>
+          <p>Compra impulsiva en tienda</p>
+        </li>
+      </ul>
+    </section>
+
+    <!--*Resumen de Gastos Hormiga-->
+    <section>
+      <h2>Resumen de Gastos Hormiga</h2>
+      <p>Impacto acumulado durante los últimos 30 días</p>
+      <div>
+        <h3>Promedio por día</h3>
+        <strong>S/7.18</strong>
+        <small>Gasto promedio diario</small>
+      </div>
+
+      <div>
+        <h3>Gasto Hormiga Frecuente</h3>
+        <small>42%</small>
+        <small>Helado de capuccino</small>
+        <label for="gasto-hormiga-frecuente">Gasto Hormiga más repetido</label>
+        <progress id="gasto-hormiga-frecuente" value="42" max="100">42%</progress>
+      </div>
+
+      <dl>
+        <dt>Apps y Micropagos</dt>
+        <dd>S/120.00</dd>
+        <dt>Comida Rápida</dt>
+        <dd>S/95.40</dd>
+        <dt>Taxi</dt>
+        <dd>S/100.00</dd>
+      </dl>
+
+      <div>
+        <h3>Consejo de Ahorro</h3>
+        <p>Si reduces tus gastos hormiga en un 50% este mes, podrías ahorrar S/X adicionales.</p>
+      </div>
+    </section>
+  </main>
+
+  <!--*Pie de página -->
+  <footer>
+    <div>
+      <strong>Willy the Wallet</strong>
+      <small>Tu billetera inteligente</small>
+    </div>
+    <small>&copy; 2026 Willy the Wallet. Todos los derechos reservados.</small>
+  </footer>
+</body>
+
+</html>
